@@ -12,7 +12,7 @@
         <!--Fresh Reminder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fresh_Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RemindersViewController" customModule="Fresh_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,14 +21,14 @@
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reminderCell" rowHeight="118" id="xHi-8r-uAw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reminderCell" rowHeight="118" id="xHi-8r-uAw" customClass="ReminderTableViewCell" customModule="Fresh_Reminder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xHi-8r-uAw" id="m75-QF-etg">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-5P-Ftl">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-5P-Ftl">
                                                     <rect key="frame" x="8" y="0.0" width="374" height="110"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-e1-91t">
@@ -86,8 +86,18 @@
                                                 <constraint firstItem="oq3-5P-Ftl" firstAttribute="leading" secondItem="m75-QF-etg" secondAttribute="leading" constant="8" id="qHw-gk-g5q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellView" destination="oq3-5P-Ftl" id="eZO-F3-g9F"/>
+                                            <outlet property="dateLabel" destination="3IC-XX-D4s" id="WeO-Ws-XTm"/>
+                                            <outlet property="isCompletedView" destination="scS-an-pGJ" id="4Kd-sn-S3I"/>
+                                            <outlet property="titleLabel" destination="hOf-T6-Cqv" id="CgP-9I-TNB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sKk-7v-GdO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wa4-Y2-iqc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
