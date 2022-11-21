@@ -13,6 +13,8 @@
 		FA5A665C292BAFCD00DF7494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A665A292BAFCD00DF7494 /* Main.storyboard */; };
 		FA5A665E292BAFCE00DF7494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A665D292BAFCE00DF7494 /* Assets.xcassets */; };
 		FA5A6661292BAFCE00DF7494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A665F292BAFCE00DF7494 /* LaunchScreen.storyboard */; };
+		FA5A666D292BB18300DF7494 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A666C292BB18300DF7494 /* Reminder.swift */; };
+		FA5A666F292BB26400DF7494 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A666E292BB26400DF7494 /* ReminderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FA5A665D292BAFCE00DF7494 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5A6660292BAFCE00DF7494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5A6662292BAFCE00DF7494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5A666C292BB18300DF7494 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		FA5A666E292BB26400DF7494 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 		FA5A6668292BAFE700DF7494 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA5A666C292BB18300DF7494 /* Reminder.swift */,
+				FA5A666E292BB26400DF7494 /* ReminderService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5A6659292BAFCD00DF7494 /* ViewController.swift in Sources */,
+				FA5A666F292BB26400DF7494 /* ReminderService.swift in Sources */,
 				FA5A6655292BAFCD00DF7494 /* AppDelegate.swift in Sources */,
 				FA5A6657292BAFCD00DF7494 /* SceneDelegate.swift in Sources */,
+				FA5A666D292BB18300DF7494 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
