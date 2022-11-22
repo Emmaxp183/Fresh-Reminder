@@ -223,15 +223,15 @@
             </objects>
             <point key="canvasLocation" x="1310.7692307692307" y="108.76777251184834"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite View Controller-->
         <scene sceneID="OCM-QP-q4g">
             <objects>
-                <viewController id="qmL-a6-RxS" sceneMemberID="viewController">
+                <viewController id="qmL-a6-RxS" customClass="FavoriteViewController" customModule="Fresh_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AqH-Rk-NR9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kar-xm-wQF">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kar-xm-wQF">
                                 <rect key="frame" x="23.666666666666657" y="285" width="343" height="274"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4aY-5b-I13">
@@ -269,6 +269,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="Mb4-fN-5W9"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="kar-xm-wQF" id="kS5-Kk-9rw"/>
+                        <outlet property="dateLabel" destination="aFR-P1-H92" id="uAg-BO-Xj4"/>
+                        <outlet property="titleLabel" destination="Awl-LA-t1d" id="cwZ-gk-t0l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MiH-Ta-6OR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
