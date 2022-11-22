@@ -9,20 +9,24 @@ import UIKit
 
 class RemindersViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
  
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
+    @IBOutlet weak var tabelview: UITableView!
+    //Refreshing my tabel view
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabelview.reloadData()
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ReminderService.shared.toggleCompleted(index: indexPath.row)
+        tabelview.reloadData()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ReminderService.shared.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Dequeue the cell from reuse pool
-        let cell = tableView.dequeueReusableCell(withIdentifier: "addReminder") as! ReminderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell") as! ReminderTableViewCell
         
         //Get the reminder from the given index path
         let reminder = ReminderService.shared.getReminder(index: indexPath.row)

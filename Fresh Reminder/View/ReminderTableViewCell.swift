@@ -21,6 +21,8 @@ class ReminderTableViewCell: UITableViewCell {
         
     }
     func updateCell(reminder:Reminder){
+        isCompletedView.layer.cornerRadius = isCompletedView.frame.size.width / 2.0
+        isCompletedView.layer.borderColor = UIColor.blue.cgColor
         titleLabel.text = reminder.title
         //Date Formatter
         let dateFormatter = DateFormatter()
@@ -28,9 +30,12 @@ class ReminderTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: reminder.date)
         
         if reminder.isCompleted{
-            isCompletedView.backgroundColor = UIColor.gray
+            isCompletedView.backgroundColor = UIColor.blue
+            isCompletedView.layer.borderWidth = 0.0
+            
         } else {
             isCompletedView.backgroundColor = UIColor.white
+            isCompletedView.layer.borderWidth = 10.0
         }
     }
 
