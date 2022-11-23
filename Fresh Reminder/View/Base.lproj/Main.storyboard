@@ -111,7 +111,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fresh Reminder" id="p1a-6M-HLi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="9CZ-bi-v39"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="9CZ-bi-v39">
+                            <connections>
+                                <action selector="editButton:" destination="BYZ-38-t0r" id="J3t-9m-eEd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="note.text.badge.plus" catalog="system" id="t7N-DX-vtq">
                             <connections>
                                 <segue destination="zqn-6o-Ryq" kind="show" identifier="fresh" id="iTS-ew-mFT"/>
@@ -119,7 +123,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tabelview" destination="Fuu-It-6Kq" id="yYo-t5-vgR"/>
+                        <outlet property="tableview" destination="Fuu-It-6Kq" id="kww-bg-sH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,16 +8,38 @@
 import UIKit
 
 class RemindersViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
- 
-    @IBOutlet weak var tabelview: UITableView!
+     //Properties
+    @IBOutlet weak var tableview: UITableView!
+   
     //Refreshing my tabel view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tabelview.reloadData()
+        tableview.reloadData()
     }
+    
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        if tableview.isEditing{
+            tableview.isEditing = false
+            sender.title = "Edit"
+        }else{
+            tableview.isEditing = true
+            sender.title = "Done"
+        }
+    }
+    
+    //Delete tabelview row
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //if user wants to delete a cell
+        if editingStyle == .delete {
+            ReminderService.shared.deleteReminder(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ReminderService.shared.toggleCompleted(index: indexPath.row)
-        tabelview.reloadData()
+        tableview.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
