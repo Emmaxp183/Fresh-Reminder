@@ -18,6 +18,7 @@
 		FA5A6673292C0D1A00DF7494 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A6672292C0D1A00DF7494 /* ReminderTableViewCell.swift */; };
 		FA5A6675292C15DA00DF7494 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A6674292C15DA00DF7494 /* FavoriteViewController.swift */; };
 		FA5A6677292CDD2100DF7494 /* NewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A6676292CDD2100DF7494 /* NewReminderViewController.swift */; };
+		FA5A6679292E61AC00DF7494 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A6678292E61AC00DF7494 /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FA5A6672292C0D1A00DF7494 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		FA5A6674292C15DA00DF7494 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		FA5A6676292CDD2100DF7494 /* NewReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderViewController.swift; sourceTree = "<group>"; };
+		FA5A6678292E61AC00DF7494 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				FA5A6654292BAFCD00DF7494 /* AppDelegate.swift */,
 				FA5A6656292BAFCD00DF7494 /* SceneDelegate.swift */,
+				FA5A6678292E61AC00DF7494 /* ButtonStyle.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				FA5A6655292BAFCD00DF7494 /* AppDelegate.swift in Sources */,
 				FA5A6675292C15DA00DF7494 /* FavoriteViewController.swift in Sources */,
 				FA5A6657292BAFCD00DF7494 /* SceneDelegate.swift in Sources */,
+				FA5A6679292E61AC00DF7494 /* ButtonStyle.swift in Sources */,
 				FA5A666D292BB18300DF7494 /* Reminder.swift in Sources */,
 				FA5A6671292C0CDC00DF7494 /* RemindersViewController.swift in Sources */,
 			);
