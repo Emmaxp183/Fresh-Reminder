@@ -13,14 +13,16 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var isCompletedView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         cellView.layer.cornerRadius = 15
-        
     }
-    func updateCell(reminder:Reminder){
+    
+    
+    func updateCell(reminder:Reminder, index: Int){
+        infoButton.tag = index
         isCompletedView.layer.cornerRadius = isCompletedView.frame.size.width / 2.0
         isCompletedView.layer.borderColor = UIColor.blue.cgColor
         titleLabel.text = reminder.title

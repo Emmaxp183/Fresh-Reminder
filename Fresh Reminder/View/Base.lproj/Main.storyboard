@@ -64,7 +64,7 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system"/>
                                                                     <connections>
-                                                                        <segue destination="zqn-6o-Ryq" kind="show" identifier="editCell" id="77s-DV-I3W"/>
+                                                                        <segue destination="zqn-6o-Ryq" kind="show" identifier="UpdateSegue" id="77s-DV-I3W"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -90,6 +90,7 @@
                                         <connections>
                                             <outlet property="cellView" destination="oq3-5P-Ftl" id="eZO-F3-g9F"/>
                                             <outlet property="dateLabel" destination="3IC-XX-D4s" id="WeO-Ws-XTm"/>
+                                            <outlet property="infoButton" destination="i79-eY-DpK" id="i1c-if-xOB"/>
                                             <outlet property="isCompletedView" destination="scS-an-pGJ" id="4Kd-sn-S3I"/>
                                             <outlet property="titleLabel" destination="hOf-T6-Cqv" id="CgP-9I-TNB"/>
                                         </connections>
@@ -338,7 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iTS-ew-mFT"/>
+        <segue reference="77s-DV-I3W"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="alarm" catalog="system" width="123" height="128"/>

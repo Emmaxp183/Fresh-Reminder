@@ -10,6 +10,7 @@ import UIKit
 class RemindersViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
      //Properties
     @IBOutlet weak var tableview: UITableView!
+    
    
     //Refreshing my tabel view
     override func viewWillAppear(_ animated: Bool) {
@@ -54,11 +55,17 @@ class RemindersViewController: UIViewController,UITableViewDataSource,UITableVie
         let reminder = ReminderService.shared.getReminder(index: indexPath.row)
         
         //Update the cell base on the reminder object
-        cell.updateCell(reminder: reminder)
+        cell.updateCell(reminder: reminder, index: indexPath.row)
         
         //Return cell
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UpdateSegue", let newReminderViewController = segue.destination as? NewReminderViewController, let infoButton = sender as? UIButton{
+            newReminderViewController.reminderIndex = infoButton.tag
+            
+        }
+    }
 
 }
