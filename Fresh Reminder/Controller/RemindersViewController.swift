@@ -9,15 +9,23 @@ import UIKit
 
 class RemindersViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
      //Properties
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var tableview: UITableView!
-    
    
     //Refreshing my tabel view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        noCellImage()
         tableview.reloadData()
     }
     
+    func noCellImage(){
+        if (ReminderService.shared.getCount() == 0){
+            tableview.backgroundView = emptyView
+        }else{
+            tableview.backgroundView = nil
+        }
+    }
     
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         if tableview.isEditing{

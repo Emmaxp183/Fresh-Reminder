@@ -25,7 +25,6 @@ class NewReminderViewController: UIViewController {
         }
     }
     
-    
     @IBAction func SaveButton(_ sender: UIButton) {
         //Create new reminder
         let reminder = Reminder(title: titleTextField.text!, date: datePiker.date, isCompleted: completedSwitch.isOn)
@@ -36,10 +35,7 @@ class NewReminderViewController: UIViewController {
         }else{
             ReminderService.shared.create(reminder: reminder)
         }
-        
         //Dissmissing the view
         navigationController!.popViewController(animated: true)
-        
-        
     }
 }

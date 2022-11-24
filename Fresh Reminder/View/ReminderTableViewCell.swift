@@ -28,7 +28,7 @@ class ReminderTableViewCell: UITableViewCell {
         titleLabel.text = reminder.title
         //Date Formatter
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "mm/dd/yy hh:mma"
+        dateFormatter.dateFormat = "MM/dd/yy hh:mma"
         dateLabel.text = dateFormatter.string(from: reminder.date)
         
         if reminder.isCompleted{

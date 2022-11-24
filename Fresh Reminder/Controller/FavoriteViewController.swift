@@ -15,7 +15,6 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundView.layer.cornerRadius = 15
-   
     }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +24,7 @@ class FavoriteViewController: UIViewController {
             titleLabel.text = favoritedReminder.title
             //Date Formatter
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "mm/dd/yy hh:mma"
+            dateFormatter.dateFormat = "MM/dd/yy hh:mma"
             dateLabel.text = dateFormatter.string(from: favoritedReminder.date)
             
         }
