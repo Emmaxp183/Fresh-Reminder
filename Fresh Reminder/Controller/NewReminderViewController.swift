@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewReminderViewController: UIViewController {
+class NewReminderViewController: UIViewController, UITextFieldDelegate {
     //Key to get acces the data
     var reminderIndex:Int?
     @IBOutlet weak var datePiker: UIDatePicker!
@@ -16,6 +16,7 @@ class NewReminderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.titleTextField.delegate = self
         //if the reminder exites porpulate the data into the outlets
         if let reminderIndex = reminderIndex{
             let reminder = ReminderService.shared.getReminder(index: reminderIndex)
@@ -23,6 +24,11 @@ class NewReminderViewController: UIViewController {
             datePiker.date = reminder.date
             completedSwitch.isOn = reminder.isCompleted
         }
+    }
+    //KeyBoard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
+        return (true)
     }
     
     @IBAction func SaveButton(_ sender: UIButton) {
